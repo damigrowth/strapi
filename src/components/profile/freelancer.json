@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_profile_freelancers",
+  "info": {
+    "displayName": "Freelancer",
+    "icon": "user",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_socials_lists",
+  "info": {
+    "displayName": "list"
+  },
+  "options": {},
+  "attributes": {
+    "Facebook": {
+      "type": "string",
+      "default": "https://facebook.com/"
+    },
+    "X": {
+      "type": "string",
+      "default": "https://x.com"
+    }
+  }
+}

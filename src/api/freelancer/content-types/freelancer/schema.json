@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "freelancers",
+  "info": {
+    "singularName": "freelancer",
+    "pluralName": "freelancers",
+    "displayName": "Freelancer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "maxLength": 15,
+      "minLength": 2
+    },
+    "lastName": {
+      "type": "string",
+      "maxLength": 20,
+      "minLength": 2
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "freelancer"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "freelancer"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string",
+      "unique": true
+    },
+    "tagline": {
+      "type": "string",
+      "maxLength": 50,
+      "minLength": 5
+    },
+    "website": {
+      "type": "string"
+    },
+    "Socials": {
+      "type": "component",
+      "repeatable": false,
+      "component": "socials.list"
+    }
+  }
+}

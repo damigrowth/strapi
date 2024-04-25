@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "price_types",
+  "info": {
+    "singularName": "price-type",
+    "pluralName": "price-types",
+    "displayName": "Price Type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "price_type"
+    }
+  }
+}

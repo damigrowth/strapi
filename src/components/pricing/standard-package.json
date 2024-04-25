@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_pricing_standard_packages",
+  "info": {
+    "displayName": "Standard Package",
+    "icon": "priceTag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Κανονικό"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 85,
+      "minLength": 10
+    },
+    "price": {
+      "type": "integer",
+      "max": 2000,
+      "min": 5,
+      "required": true
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pricing.attribute",
+      "max": 4,
+      "min": 4,
+      "required": true
+    }
+  }
+}

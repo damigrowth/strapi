@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 80,
+      "minLength": 10
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "projects"
+    },
+    "freelancer_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::freelancer-type.freelancer-type",
+      "inversedBy": "projects"
+    },
+    "price_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::price-type.price-type",
+      "inversedBy": "projects"
+    },
+    "cost": {
+      "type": "integer",
+      "required": true,
+      "min": 10
+    },
+    "project_duration": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project-duration.project-duration",
+      "inversedBy": "projects"
+    },
+    "level": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::level.level",
+      "inversedBy": "projects"
+    },
+    "language": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::language.language",
+      "inversedBy": "projects"
+    },
+    "language_level": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::language-level.language-level",
+      "inversedBy": "projects"
+    },
+    "skills": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::skill.skill",
+      "inversedBy": "projects"
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 1000,
+      "required": true,
+      "minLength": 50
+    }
+  }
+}

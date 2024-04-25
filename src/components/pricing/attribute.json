@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_pricing_attributes",
+  "info": {
+    "displayName": "Attribute",
+    "icon": "check",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "isCheckField": {
+      "type": "boolean"
+    },
+    "title": {
+      "type": "string"
+    },
+    "checked": {
+      "type": "boolean",
+      "default": false
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

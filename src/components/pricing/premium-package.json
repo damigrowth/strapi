@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_pricing_premium_packages",
+  "info": {
+    "displayName": "Premium Package",
+    "icon": "priceTag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Προχωρημένο"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 85,
+      "minLength": 10,
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true,
+      "max": 5000,
+      "min": 10
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pricing.attribute",
+      "max": 4,
+      "min": 4,
+      "required": true
+    }
+  }
+}

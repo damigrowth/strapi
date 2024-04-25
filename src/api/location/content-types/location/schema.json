@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locations",
+  "info": {
+    "singularName": "location",
+    "pluralName": "locations",
+    "displayName": "Location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "zipcode": {
+      "type": "biginteger"
+    },
+    "area": {
+      "type": "string"
+    },
+    "county": {
+      "type": "string"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "location"
+    },
+    "freelancers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::freelancer.freelancer"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
+    }
+  }
+}

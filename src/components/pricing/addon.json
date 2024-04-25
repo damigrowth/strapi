@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_pricing_addons",
+  "info": {
+    "displayName": "Addon",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 85,
+      "minLength": 10,
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "max": 1000,
+      "min": 5,
+      "required": true
+    }
+  }
+}
